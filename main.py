@@ -20,18 +20,30 @@ fourth = visio.dropShape(pagObj, stnObj.Masters.ItemU('Rectangle'), 5, 3, "Fourt
 
 visio.connectShapes2(pagObj, appVisio, third, fourth, 'Connections.X1', 'PinX','second connect')
 '''
+template = {'R4': {'Fa0/1': {'R5': 'Fa0/1'},
+                   'Fa0/2': {'R6': 'Fa0/0'},
+                   'Fa0/3': {'R8': 'Fa0/4'}},
+            'R5': {'Fa0/1': {'R4': 'Fa0/1'}},
+            'R6': {'Fa0/0': {'R4': 'Fa0/2'},
+                   'Fa0/1': {'R8': 'Fa0/3'}},
+            'R7': {'Fa0/0': {'R8': 'Fa0/2'}},
+            'R8': {'Fa0/2': {'R7': 'Fa0/0'},
+                   'Fa0/3': {'R6': 'Fa0/1'},
+                   'Fa0/4': {'R4': 'Fa0/3'}}}
+
 
 templ = {'R4': {'Fa0/1': {'R5': 'Fa0/1'}, 'Fa0/2': {'R6': 'Fa0/0'}, 'Fa0/3': {'R8': 'Fa0/4'}}, 'R6': {'Fa0/1': {'R8': 'Fa0/3'}}, 'R7': {'Fa0/0': {'R8': 'Fa0/2'}}}
 
 
+node_list = []
+
+for key in template.keys():
+    node_list.append(key)
 	
-for node, value in templ.items():
-    obj_list = []
-    
-	if node not in obj_list:
-	    obj_list.append(key)
-	    
-        for neighbor in value.values
+for node in node_list:
+    visio.dropShape(pagObj, stnObj.Masters.ItemU('Rectangle'), 5, 1, "{}".format(node))
+	
+
 
 	
 '''	
