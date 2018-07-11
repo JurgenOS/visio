@@ -21,15 +21,17 @@ fourth = visio.dropShape(pagObj, stnObj.Masters.ItemU('Rectangle'), 5, 3, "Fourt
 visio.connectShapes2(pagObj, appVisio, third, fourth, 'Connections.X1', 'PinX','second connect')
 '''
 
-import json
+templ = {'R4': {'Fa0/1': {'R5': 'Fa0/1'}, 'Fa0/2': {'R6': 'Fa0/0'}, 'Fa0/3': {'R8': 'Fa0/4'}}, 'R6': {'Fa0/1': {'R8': 'Fa0/3'}}, 'R7': {'Fa0/0': {'R8': 'Fa0/2'}}}
 
-with open('topology.json') as f:
-    topology_json = json.loads(f.read())
+
 	
-for key in topology_json.keys():
-    i = 0
-    visio.dropShape(pagObj, stnObj.Masters.ItemU('Rectangle'), i, 1, "{}".format(key))
-    i =+3
+for node, value in templ.items():
+    obj_list = []
+    
+	if node not in obj_list:
+	    obj_list.append(key)
+	    
+        for neighbor in value.values
 
 	
 '''	
