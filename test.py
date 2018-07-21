@@ -1,27 +1,57 @@
-import visio
+# -*- encoding: utf-8 -*-
 
-template = {'R4': {'Fa0/1': {'R5': 'Fa0/1'},
-                   'Fa0/2': {'R6': 'Fa0/0'},
-                   'Fa0/3': {'R8': 'Fa0/4'}},
-            'R5': {'Fa0/1': {'R4': 'Fa0/1'}},
-            'R6': {'Fa0/0': {'R4': 'Fa0/2'},
-                   'Fa0/1': {'R8': 'Fa0/3'}},
-            'R7': {'Fa0/0': {'R8': 'Fa0/2'}},
-            'R8': {'Fa0/2': {'R7': 'Fa0/0'},
-                   'Fa0/3': {'R6': 'Fa0/1'},
-                   'Fa0/4': {'R4': 'Fa0/3'}}}
+import bs4 as bs
+
+soup = bs.BeautifulSoup(open('test.xml'), 'xml')
 
 
-templ = {'R4': {'Fa0/1': {'R5': 'Fa0/1'}, 'Fa0/2': {'R6': 'Fa0/0'}, 'Fa0/3': {'R8': 'Fa0/4'}}, 'R6': {'Fa0/1': {'R8': 'Fa0/3'}}, 'R7': {'Fa0/0': {'R8': 'Fa0/2'}}}
+amount_of_intf = 48
 
 
-tire_1 = {}
-tire_2 = {}
-tire_3 = {}
 
 
-for node, value in template.items():
-    
-        #i = len(tire_1)
-        #host = "{}".format(node)
-        visio.dropShape(pagObj, stnObj.Masters.ItemU('Rectangle'), 5, i + 1, node)
+
+
+#f = open('stancill_1.xml', 'w')
+for intf in range(1, amount_of_intf + 1):
+    #print(templ.format(intf, amount_of_intf, intf))
+    Row = soup.new_tag("Row", IX = '"{}"'.format(intf))
+
+	
+    Cell_W = soup.new_tag("Cell", F = "Width/{}*{}".format(amount_of_intf, intf), N = "X", V = "0")
+    Cell_H = soup.new_tag("Cell", F = "Height*0", N = "Y", V = "0")
+    Cell_X = soup.new_tag("Cell", N = "DirX", V = "0")	
+    Cell_Y = soup.new_tag("Cell", N = "DirY", V = "0")
+    Cell_T = soup.new_tag("Cell", N = "Type", V = "0")
+    Cell_Au = soup.new_tag("Cell", N = "AutoGen", V = "0")
+    Cell_N_F = soup.new_tag("Cell", F="No Formula", N="Prompt", V="")
+	
+	
+    Row.append(Cell_W)
+    Row.append(Cell_H)
+    Row.append(Cell_X)
+    Row.append(Cell_Y)
+    Row.append(Cell_T)
+    Row.append(Cell_Au)
+    Row.append(Cell_N_F)
+	
+    soup.Shapes.Shape('Section', N = 'Connection')[0].append(Row)
+	
+'''
+    templ ='<Row IX="{}">\
+<Cell F="Width/{}*{}" N="X" V="0"/>\
+<Cell F="Height*0" N="Y" V="0"/>\
+<Cell N="DirX" V="0"/>\
+<Cell N="DirY" V="0"/>\
+<Cell N="Type" V="0"/>\
+<Cell N="AutoGen" V="0"/>\
+<Cell F="No Formula" N="Prompt" V="0"/>\
+</Row>'
+    soup.Shapes.Shape('Section', N = 'Connection')[0].append(templ.format(intf, amount_of_intf, intf))
+    #f.write(templ.format(intf, amount_of_intf, intf))
+    print(soup.prettify())'''
+	
+	
+	
+f = open('stancill_1.xml', 'w')
+f.write(str(soup))

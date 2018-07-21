@@ -1,0 +1,57 @@
+<Shape ID='7' Type='Shape' LineStyle='1' FillStyle='1' TextStyle='3'>
+	<Cell N='PinX' V='0' F='GUARD(Sheet.5!Width*0.5)'/>
+	<Cell N='PinY' V='-0.15'/>
+	<Cell N='Width' V='0.3'/>
+	<Cell N='Height' V='0.1'/>
+	<Cell N='LocPinX' V='0' F='Width*0.5'/>
+	<Cell N='LocPinY' V='0' F='Height*0.5'/>
+	<Cell N='Angle' V='90' U='DEG'/>
+	<Cell N='FlipX' V='0'/>
+	<Cell N='FlipY' V='0'/>
+	<Cell N='ResizeMode' V='0'/>
+	<Cell N='EventDblClick' V='0' F='OPENTEXTWIN()'/>
+	<Cell N='LinePattern' V='0' F='THEMEGUARD(0)'/>
+	<Cell N='FillPattern' V='0' F='THEMEGUARD(0)'/>
+	<Cell N='ShdwPattern' V='0' F='THEMEGUARD(0)'/>
+	<Cell N='LineGradientEnabled' V='0' F='THEMEGUARD(FALSE)'/>
+	<Cell N='FillGradientEnabled' V='0' F='THEMEGUARD(FALSE)'/>
+	<Cell N='QuickStyleVariation' V='3'/>
+	<Cell N='ObjType' V='1'/>
+	<Section N='Character'>
+		<Row IX='0'>
+			<Cell N='Font' V='BrowalliaUPC'/>
+			<Cell N='Style' V='0'/>
+			<Cell N='Size' V='0.05' U='PT'/>
+			<Cell N='ComplexScriptFont' V='BrowalliaUPC'/>
+			<Cell N='LangID' V='en-US'/>
+		</Row>
+	</Section>
+	<Section N='Geometry' IX='0'>
+		<Cell N='NoFill' V='0'/>
+		<Cell N='NoLine' V='0'/>
+		<Cell N='NoShow' V='0'/>
+		<Cell N='NoSnap' V='0'/>
+		<Cell N='NoQuickDrag' V='0'/>
+		<Row T='RelMoveTo' IX='1'>
+			<Cell N='X' V='0'/>
+			<Cell N='Y' V='1'/>
+		</Row>
+		<Row T='RelLineTo' IX='2'>
+			<Cell N='X' V='1'/>
+			<Cell N='Y' V='0'/>
+		</Row>
+		<Row T='RelLineTo' IX='3'>
+			<Cell N='X' V='1'/>
+			<Cell N='Y' V='1'/>
+		</Row>
+		<Row T='RelLineTo' IX='4'>
+			<Cell N='X' V='0'/>
+			<Cell N='Y' V='1'/>
+		</Row>
+		<Row T='RelLineTo' IX='5'>
+			<Cell N='X' V='0'/>
+			<Cell N='Y' V='0'/>
+		</Row>
+	</Section>
+	<Text><cp IX='0'/>Fa0/10</Text>
+</Shape>

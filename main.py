@@ -2,6 +2,14 @@ import visio
 import win32com
 
 
+'''
+def xml_clear(file):
+    res = ''
+    for string in file.read().split('\n'):	
+        res += string.strip()
+    return res
+'''
+	
 appVisio = win32com.client.Dispatch("Visio.Application")
 appVisio.Visible =1
 
@@ -77,12 +85,14 @@ for key, value in templ.items():
     for interf, item in value.items():
         first = nodes[key]
         second = nodes[list(item.keys())[0]]
-        first_inf = 'Connections.X{}'.format(interf.split('/')[-1])
-        second_inf = 'Connections.X{}'.format((list(item.values())[0]).split('/')[-1])
+        first_inf = 'Connections.X{}'.format(int(interf.split('/')[-1])+1)
+        second_inf = 'Connections.X{}'.format(int((list(item.values())[0]).split('/')[-1])+1)
         note = '{}--{}'.format(interf.split('/')[-1], list(item.values())[0])
-
+        #print()
+        #print('first', first_inf)
+        #print('second', second_inf)
         visio.connectShapes2(pagObj, appVisio, first, second, first_inf, second_inf, note)
-	
+        #visio.connectShapes(pagObj, appVisio, first, second, 'text')
 
 
 	

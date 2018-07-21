@@ -1,0 +1,6 @@
+	<Connects>
+		<Connect FromSheet='11' FromCell='EndX' FromPart='12' ToSheet='7' ToCell='Connections.X10' ToPart='109'/>
+		<Connect FromSheet='11' FromCell='BeginX' FromPart='9' ToSheet='10' ToCell='Connections.X1' ToPart='100'/>
+		<Connect FromSheet='9' FromCell='EndX' FromPart='12' ToSheet='7' ToCell='Connections.X11' ToPart='110'/>
+		<Connect FromSheet='9' FromCell='BeginX' FromPart='9' ToSheet='8' ToCell='Connections.X1' ToPart='100'/>
+	</Connects>

@@ -36,11 +36,11 @@ visio.Application.ActiveWindow.Page.PageSheet.CellsSRC(visSectionObject, visRowP
 
 # Place a Visio shape on the Visio document
 def dropShape (pg,shapeType, posX, posY, theText):
-
+    '''
     print ("Shape type = %s" % shapeType)
     print ("X = %i" % posX)
     print ("Y = %i" % posY)
-
+    '''
     vsoShape = pg.Drop(shapeType, posX, posY)
 
     setDefaultShapeValues(vsoShape)

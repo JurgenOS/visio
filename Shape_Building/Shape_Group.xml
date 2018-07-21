@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<MasterContents xmlns='http://schemas.microsoft.com/office/visio/2012/main' xmlns:r='http://schemas.openxmlformats.org/officeDocument/2006/relationships' xml:space='preserve'>
+	<Shapes>
+		<Shape ID='5' NameU='Host_name' IsCustomNameU='1' Name='Host_name' IsCustomName='1' Type='Group' LineStyle='0' FillStyle='0' TextStyle='0'>
+			<Cell N='PinX' V='16'/>
+			<Cell N='PinY' V='0'/>
+			<Cell N='Width' V='2.5'/>
+			<Cell N='Height' V='1.5'/>
+			<Cell N='LocPinX' V='0' F='Width*0.5'/>
+			<Cell N='LocPinY' V='0' F='Height*0.5'/>
+			<Cell N='Angle' V='0' U='DEG'/>
+			<Cell N='FlipX' V='0'/>
+			<Cell N='FlipY' V='0'/>
+			<Cell N='ResizeMode' V='0'/>
+			<Cell N='ObjType' V='8'/>
+			<Shapes>
+			</Shapes>
+		</Shape>
+	</Shapes>
+</MasterContents>
